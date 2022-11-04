@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script
+            src="https://kit.fontawesome.com/18f6c381a7.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+        <title>Meditation</title>
+    </head>
+    <body>
+        <video loop muted id="backgroundVideo"></video>
+
+        <audio id="audio"></audio>
+
+        <div id="meditation">
+            <menu>
+                <button id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div id="menu">
+                    <button class="time_option" value="5">
+                        5 <span>min</span>
+                    </button>
+                    <button class="time_option" value="10">
+                        10 <span>min</span>
+                    </button>
+                    <button class="time_option" value="15">
+                        15 <span>min</span>
+                    </button>
+                </div>
+            </menu>
+
+            <div class="time_section">
+                <button class="time_option" value="5">5 minutes</button>
+                <button class="time_option" value="10">10 minutes</button>
+                <button class="time_option" value="15">15 minutes</button>
+            </div>
+
+            <div class="mid">
+                <!-- <button id="pause" value="pause">Pause</button> -->
+                <div id="timer">00 : 00</div>
+
+                <div class="plusTime">
+                    <button class="addTime" value="1">+1</button>
+                    <button class="addTime" value="5">+5</button>
+                    <button class="addTime" value="10">+10</button>
+                </div>
+            </div>
+
+            <div class="background">
+                <button class="background_option" id="dark" value="rain" />
+                <button class="background_option" id="sunny" value="beach" />
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>

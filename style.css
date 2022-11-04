@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+button {
+    padding: 0.5em 0.75em;
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: fit-content;
+    background: none;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(100, 100, 100, 1);
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#meditation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vw;
+    height: fit-content;
+    width: 100%;
+    height: 100%;
+    background-image: url("./boy-1807518.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#pause {
+    margin-bottom: 5vh;
+}
+
+#timer {
+    font-size: 5.5rem;
+    font-weight: 600;
+    width: fit-content;
+    text-align: center;
+}
+
+.mid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.plusTime {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, 8rem);
+    -webkit-transform: translate(-50%, 8rem);
+    -moz-transform: translate(-50%, 8rem);
+    -ms-transform: translate(-50%, 8rem);
+    -o-transform: translate(-50%, 8rem);
+}
+
+.addTime {
+    font-size: 2rem;
+    padding: 0.5rem 3rem;
+}
+
+.addTime:not(:last-child) {
+    margin-right: 1vw;
+}
+
+.time_section,
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time_section .time_option {
+    min-width: 300px;
+}
+
+.time_section .time_option:not(:last-child) {
+    margin-bottom: 20vh;
+}
+
+.background_option:not(:last-child) {
+    margin-bottom: 20vh;
+}
+
+#dark,
+#sunny {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-size: 6rem 6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#dark {
+    background-image: url("./favpng_rain-free-content-cloud-clip-art.png");
+}
+
+#sunny {
+    background-image: url("./favpng_ducs-de-longueuil-text-clip-art.png");
+}
+
+menu {
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    #meditation {
+        display: flex;
+        flex-direction: column;
+        padding: 10vh 10vw;
+    }
+
+    .time_section,
+    .background {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .background {
+        justify-content: space-evenly;
+    }
+
+    .time_section .time_option:not(:last-child),
+    .background_option:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1065px) {
+    #meditation {
+        padding: 10vh 5vw;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .time_section {
+        justify-content: space-evenly;
+    }
+    #meditation {
+        padding: 10vh 0;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #meditation {
+        padding: 3vh 0;
+        justify-content: space-between;
+    }
+    .time_section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time_section .time_option:not(:last-child) {
+        margin-bottom: 3vh;
+    }
+
+    #dark,
+    #sunny {
+        width: 8rem;
+        height: 8rem;
+        background-size: 5rem 5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .time_section {
+        display: none;
+    }
+
+    #meditation {
+        padding: 33vh 0 0;
+    }
+
+    .background {
+        margin-bottom: 10vh;
+    }
+
+    .plusTime {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .addTime {
+        padding: 0.5rem;
+        min-width: 5rem;
+    }
+
+    .addTime:not(:last-child) {
+        margin-right: none;
+    }
+
+    menu {
+        display: block;
+        position: absolute;
+        margin-left: 3vh;
+        left: 0;
+        top: 3vh;
+    }
+
+    menu button {
+        padding: 0;
+        border: none;
+    }
+
+    #menu {
+        display: none;
+        margin-top: 2vh;
+    }
+
+    #menu .time_option {
+        width: 100%;
+        text-align: left;
+        padding: 0 5vw;
+    }
+
+    #menu .time_option span {
+        font-size: 1.5rem;
+    }
+
+    #menu.active {
+        display: block;
+    }
+
+    #hamburger {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hamburger div {
+        display: block;
+        width: 2rem;
+        height: 0.3rem;
+        background: white;
+        border-radius: 0.17rem;
+        -webkit-border-radius: 0.17rem;
+        -moz-border-radius: 0.17rem;
+        -ms-border-radius: 0.17rem;
+        -o-border-radius: 0.17rem;
+    }
+
+    #hamburger div:not(:last-child) {
+        margin-bottom: 0.2rem;
+    }
+}
